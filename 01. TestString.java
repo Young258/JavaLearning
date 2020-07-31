@@ -3,7 +3,7 @@ package package1;
 class MyString1{
 	int a = 233;
 	double b = 6.66;
-	char c = 'Ñî';
+	char c = 'æ¨';
 	
 	@Override
 	public String toString(){
@@ -14,7 +14,7 @@ class MyString1{
 class MyString2{
 	int a = 5555;
 	double b = 8.88;
-	char c = '¹ó';
+	char c = 'è´µ';
 	
 	@Override
 	public String toString(){
@@ -22,43 +22,43 @@ class MyString2{
 	}
 }
 
-//ÓÃÓÚ²âÊÔ ×Ö·û´®StringÔËËã·ûºÅ"+"µÄÏ¸½Ú
-//²Î¿¼×Ôhttps://www.zhihu.com/question/57105649/answer/195300498
-// cmdÖÐ ÇÃÃüÁî javap -v ÀàÃû.class ¾Í¿ÉÒÔ¿´µ½ ×Ô¼ºËùÐ´java±àÒë³É×Ö½ÚÂëÎÄ¼þºó ÄÚ²¿µÄÏ¸½Ú
-// ÕâÀïÃæÉæ¼°µ½ .classÎÄ¼þ(×Ö½ÚÂëÎÄ¼þ) ¹ØÓÚ×Ö½ÚÂëÎÄ¼þ±³¾°ÖªÊ¶²Î¿¼×Ôhttps://blog.csdn.net/brave2211/category_9262236.html »òÕß¡¶ÉîÈëÀí½âjavaÐéÄâ»ú¡·
+//ç”¨äºŽæµ‹è¯• å­—ç¬¦ä¸²Stringè¿ç®—ç¬¦å·"+"çš„ç»†èŠ‚
+//å‚è€ƒè‡ªhttps://www.zhihu.com/question/57105649/answer/195300498
+// cmdä¸­ æ•²å‘½ä»¤ javap -v ç±»å.class å°±å¯ä»¥çœ‹åˆ° è‡ªå·±æ‰€å†™javaç¼–è¯‘æˆå­—èŠ‚ç æ–‡ä»¶åŽ å†…éƒ¨çš„ç»†èŠ‚
+// è¿™é‡Œé¢æ¶‰åŠåˆ° .classæ–‡ä»¶(å­—èŠ‚ç æ–‡ä»¶) å…³äºŽå­—èŠ‚ç æ–‡ä»¶èƒŒæ™¯çŸ¥è¯†å‚è€ƒè‡ªhttps://blog.csdn.net/brave2211/category_9262236.html æˆ–è€…ã€Šæ·±å…¥ç†è§£javaè™šæ‹Ÿæœºã€‹
 
 public class TestString {
 	public static void main(String[] args) {		
 		/*
-		 0  // String³õÊ¼»¯  ×Ö·û´®³£Á¿¸³Öµ  µ÷ÓÃ¹¹Ôìº¯Êý
-		  String str1 = "oooo";// ldc ¼ÓÔØ³ÉString¶ÔÏó
-		  String str2 = new String("8888"); // new Ò»¸öString¶ÔÏó
+		 0  // Stringåˆå§‹åŒ–  å­—ç¬¦ä¸²å¸¸é‡èµ‹å€¼  è°ƒç”¨æž„é€ å‡½æ•°
+		  String str1 = "oooo";// ldc åŠ è½½æˆStringå¯¹è±¡
+		  String str2 = new String("8888"); // new ä¸€ä¸ªStringå¯¹è±¡
 		  
-		1  //×Ö·û´®³£Á¿+×Ö·û´®³£Á¿
+		1  //å­—ç¬¦ä¸²å¸¸é‡+å­—ç¬¦ä¸²å¸¸é‡
 		String str1 = "aaa" + "bbb";
 		
-		//ldc ¼ÓÔØ+Á¬½Ó "aaa" + "bbb" ÐÎ³ÉString¶ÔÏó
+		//ldc åŠ è½½+è¿žæŽ¥ "aaa" + "bbb" å½¢æˆStringå¯¹è±¡
 		
 		
-		2  //×Ö·û´®³£Á¿+ String¶ÔÏó
+		2  //å­—ç¬¦ä¸²å¸¸é‡+ Stringå¯¹è±¡
 		String str1 = "aaaa";
 		String str2 = "cccc" + str1;		
-		// "cccc" Í¨¹ýldc ÐÎ³Éstring¶ÔÏó str
+		// "cccc" é€šè¿‡ldc å½¢æˆstringå¯¹è±¡ str
 		//  obj = new StringBuilder(str);
 		//   obj.append(str1)
 		// obj.toString
 		 
 		
-		3  //×Ö·û´®³£Á¿+ String¶ÔÏó
+		3  //å­—ç¬¦ä¸²å¸¸é‡+ Stringå¯¹è±¡
 		String str1 = "aaaa";
 		String str2 = str1 +"cccc";	
 		//obj = new StringBuilder(String.valueOf(str1))
-		// ldc ¼ÓÔØ"cccc"  String¶ÔÏó str2
+		// ldc åŠ è½½"cccc"  Stringå¯¹è±¡ str2
 		// obj.append(str2)
 		// obj.toString()
 		
 		
-		4  //String¶ÔÏó + String¶ÔÏó
+		4  //Stringå¯¹è±¡ + Stringå¯¹è±¡
 		String str1 = "aaaa";
 		String str2 = "ddddd";
 		String str3 = str1 + str2;
@@ -67,36 +67,36 @@ public class TestString {
 		// obj.toString()
 		
 		
-		5  //×Ö·û´®³£Á¿ + ÕûÊý/¸¡µãÊý/×Ö·û
+		5  //å­—ç¬¦ä¸²å¸¸é‡ + æ•´æ•°/æµ®ç‚¹æ•°/å­—ç¬¦
 		String  str = "qqqq" + 2333;
 		str = "qqqq" + 2.333;
 		str = "qqqq" + 'r';
-		// ldc Á¬½Ó
+		// ldc è¿žæŽ¥
 		
 		
 		
-		6 //String¶ÔÏó  + ÕûÊý/¸¡µãÊý/×Ö·û
+		6 //Stringå¯¹è±¡  + æ•´æ•°/æµ®ç‚¹æ•°/å­—ç¬¦
 		String str1 = "www";
 		String str2 = str1 + 4444; --> new StringBuilder(String.valueOf(str1)) .append(I)  .toString()
 		       str2 = str1 + 4.444;--> new StringBuilder(String.valueOf(str1)) .append(D)  .toString()
 		       str2 = str1 + 'u';  --> new StringBuilder(String.valueOf(str1)) .append(C)  .toString()
-		// º¬¶ÔÏóµÄ+ Ã¿´Î¶¼Òª new StringBuilder() 
+		// å«å¯¹è±¡çš„+ æ¯æ¬¡éƒ½è¦ new StringBuilder() 
 		
 	    String str2 = "www";
-		       str2 = str2+ 4444;  // ÐèÒªnew StringBuilder¶ÔÏó
-		       str2 = str2 + 4.444; //ÐèÒªnew StringBuilder¶ÔÏó
-		       str2 = str2 + 'u';//ÐèÒªnew StringBuilder¶ÔÏó
-		      // Õâ¸ö²Ù×÷Ò²ÊÇ 
+		       str2 = str2+ 4444;  // éœ€è¦new StringBuilderå¯¹è±¡
+		       str2 = str2 + 4.444; //éœ€è¦new StringBuilderå¯¹è±¡
+		       str2 = str2 + 'u';//éœ€è¦new StringBuilderå¯¹è±¡
+		      // è¿™ä¸ªæ“ä½œä¹Ÿæ˜¯ 
 		
 		
-		7  //String¶ÔÏó +  ÕûÊý/¸¡µãÊý/×Ö·û + ×Ö·û´®³£Á¿
+		7  //Stringå¯¹è±¡ +  æ•´æ•°/æµ®ç‚¹æ•°/å­—ç¬¦ + å­—ç¬¦ä¸²å¸¸é‡
 		String str1 = "8888";
 		String str2 = str1 + 4.5 + 666 +'t' + "young";
-		// new  Ò»¸öStringBuilder¶ÔÏó
-		// ºóÃæµÄ .append(4.5) .append(666) .append('t') .append("young")  
+		// new  ä¸€ä¸ªStringBuilderå¯¹è±¡
+		// åŽé¢çš„ .append(4.5) .append(666) .append('t') .append("young")  
 		
 		
-		8 // String¶ÔÏó¼ÐÔÓÔÚÒ»¶Ñ³£Á¿ÖÐ¼ä 
+		8 // Stringå¯¹è±¡å¤¹æ‚åœ¨ä¸€å †å¸¸é‡ä¸­é—´ 
 		String str1 = "asdfg";
 		String str2;
 		str2 = 444 + 4.5 + "888" + str1 + "yang";
@@ -110,13 +110,13 @@ public class TestString {
 		  
 		 
 		 
-		//  String¶ÔÏó + ×Ô¶¨ÒåÀà¶ÔÏó
+		//  Stringå¯¹è±¡ + è‡ªå®šä¹‰ç±»å¯¹è±¡
 		MyString1 m1 = new MyString1();
 		MyString2 m2 = new MyString2();
 		
 		String str;
-		str = "String + " + m1 +m2;//ldc "String: " ³ÉString¶ÔÏóstr --> obj = new StringBuilder(str) -->  obj.append(m1) --> obj.append(m2)
-		 																								//ÕâÀïµ÷ÓÃm1.toString()  m2.toString()
+		str = "String + " + m1 +m2;//ldc "String: " æˆStringå¯¹è±¡str --> obj = new StringBuilder(str) -->  obj.append(m1) --> obj.append(m2)
+		 																								//è¿™é‡Œè°ƒç”¨m1.toString()  m2.toString()
 		System.out.println(str);
 		*/
 		
