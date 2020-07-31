@@ -116,7 +116,9 @@ public class TestString {
 		
 		String str;
 		str = "String + " + m1 +m2;//ldc "String: " 成String对象str --> obj = new StringBuilder(str) -->  obj.append(m1) --> obj.append(m2)
-		 																								//这里调用m1.toString()  m2.toString()
+												//这里调用m1.toString()  m2.toString()
+		
+		// 事实是System.out.print(对象) 也是调用对象的toString方法
 		System.out.println(str);
 		*/
 		
