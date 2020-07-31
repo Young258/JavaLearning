@@ -24,8 +24,8 @@ class MyString2{
 
 //用于测试 字符串String运算符号"+"的细节
 //参考自https://www.zhihu.com/question/57105649/answer/195300498
-// cmd中 敲命令 javap -v 类名.class 就可以看到 自己所写java编译成字节码文件后 内部的细节
-// 这里面涉及到 .class文件(字节码文件) 关于字节码文件背景知识参考自https://blog.csdn.net/brave2211/category_9262236.html 或者《深入理解java虚拟机》
+// cmd中 敲命令 javap -v 类名.class 就可以看到 自己所写.java文件编译成(.class)字节码文件后的内部细节
+// 这里面涉及到 .class文件(字节码文件)。关于字节码文件背景知识参考自https://blog.csdn.net/brave2211/category_9262236.html 或者《深入理解java虚拟机》
 
 public class TestString {
 	public static void main(String[] args) {		
