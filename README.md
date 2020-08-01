@@ -28,7 +28,7 @@
     数组链表: 数组的每一个位置都是一个单链表的表头;hash相同的会放在同一个单链表中；当单链表长度超过一定限制时,链表转成红黑树存储
     确定key-value在数组中位置: key.hashCode() --> hash(hashcode) --> hash%length
     //由此可知对于同一个map, 键值对所存放位置仅仅取决于key这个对象所返回的hashcode,而这个的返回值又取决于key这个对象的字段成员的值
-    
+    //https://www.cnblogs.com/chengxiao/p/6059914.html
 
      
             
