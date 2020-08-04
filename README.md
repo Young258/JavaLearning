@@ -31,7 +31,9 @@
     //https://www.cnblogs.com/chengxiao/p/6059914.html
 
      
-            
+### 05 synchronized关键字
+    02.synchronized关键字.md详细说明了关键字synchronized的几种用法
+    
 
 
 
