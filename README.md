@@ -18,6 +18,9 @@
 ## 03 字符串常量
     //03.StringConstantPool.java测试了字符串常量赋值给String对象， 字符串常量相加时 发生的事情 
 
+## 04 String.intern()
+    04.string.intern().java中测试intern方法
+
 ### 04 System
     1.特点: 不可实例化对象;标准输入输出; 输入/输出到/自控制台
     2.字段: in --> 类型BufferedInputStream  //标准输入
